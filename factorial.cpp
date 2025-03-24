@@ -1,13 +1,16 @@
-#include<iostream>
-using namespace std;
+#include<bits/stdc++.h>
+using namespace std ;
+
 int main(){
     int n;
     cin>>n;
-    int s=0;
-    int fac=1;
+    long long sum=0;
     for(int i=1;i<=n;i++){
-        fac*=i;
-    
+        int fax=1;
+        for(int j=1;j<=i;j++){
+            fax=fax*j;
+        }
+        sum+=fax;
     }
-    cout<<fac;
+    cout<<sum;
 }
